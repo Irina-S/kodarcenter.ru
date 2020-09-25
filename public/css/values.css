@@ -1,0 +1,29 @@
+:root{
+    --light-gray: #e1e1e1;
+    --gray:#cecece;
+    /* --orange:rgb(255, 218, 56); */
+    --orange:rgb(255, 203, 41);
+    /* --deep-orange:#F2994A; */
+    --deep-orange:rgb(250, 167, 49);;
+    --dark-orange:rgba(201, 116, 43, 0.452);
+    --nav-font-color:#fff;
+    --deep-gray:#3a3a3a;
+    --deep-gray-placeholder:#5a5a5a;
+    --deep-gray-text:#707070;
+    --turquoise:#2ca6d9;
+
+    --light-blue:#e9f3ff;
+
+    --page-hor-padding: 8%;
+    --header-height:120px;
+    --nav-height:50px;
+    --content-ver-padding:20px;
+    --footer-height:350px;
+
+    --nav-font-size:15px;
+    --contacts-font-size:15pt;
+
+    --search-field-height:35px;
+
+    --aside-min-width:230px;
+}

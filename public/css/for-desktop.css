@@ -1,0 +1,24 @@
+/* стили для экранов планшетов */
+
+    /* хэдер */
+    .header{
+        padding: 0 3% 0 3%;
+    }
+
+    /* панель навигации */
+    .nav{
+        padding-left: 3%;
+        padding-right: 3%;
+
+    }
+
+        .content{
+            margin: 0 3%;
+        }
+
+
+/* подвал */
+.footer{
+    padding-left: 3%;
+    padding-right: 3%;
+}

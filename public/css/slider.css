@@ -1,0 +1,125 @@
+/* https://habr.com/ru/post/468253/ */
+
+.sim-slider img {
+    width: 100% !important;
+    height:350px;
+    object-fit: cover;
+  }
+
+  @media (max-width:700px){
+    .sim-slider img{
+      height:280px;
+    }
+  }
+
+  @media (max-width:700px){
+    .sim-slider img{
+      height:250px;
+    }
+  }
+  
+  .sim-slider {
+    max-width: 1000px;
+    min-width: 320px;
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 30px 50px; */
+    /* border: 1px solid #ccd; */
+    background-color: white;
+  }
+  
+  /* General styles */
+  .sim-slider {
+    position: relative;
+  }
+  
+  .sim-slider-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .sim-slider-element {
+    width: 100%;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    display: block;
+  }
+  
+  /* Navigation item styles */
+  div.sim-slider-arrow-left,
+  div.sim-slider-arrow-right {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.4;
+    z-index: 4;
+    background-color: var(--light-gray);
+    border-radius:50%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width:660px){
+    div.sim-slider-arrow-left,
+    div.sim-slider-arrow-right {
+      width:45px;
+      height:45px;
+    }
+  }
+  
+  div.sim-slider-arrow-left {
+    left: 10px;
+    top: calc(50% - 20px);
+    display: block;
+    background-image: url("../img/arrow-left.svg");
+    background-repeat:  no-repeat;
+    background-position: center;
+    background-size:30px auto;
+    padding:10px;
+  }
+  
+  div.sim-slider-arrow-right {
+    right: 10px;
+    top: calc(50% - 20px);
+    display: block;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat:  no-repeat;
+    background-position: center;
+    background-size:30px auto;
+    padding:10px;
+  }
+  
+  div.sim-slider-arrow-left:hover {
+    opacity: 0.8;
+  }
+  
+  div.sim-slider-arrow-right:hover {
+    opacity: 0.8;
+  }
+  
+  div.sim-slider-dots {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: 3;
+    text-align: center;
+  }
+  
+  span.sim-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    padding: 0;
+    display: inline-block;
+    background-color: #BBB;
+    border-radius: 5px;
+    cursor: pointer;
+  }

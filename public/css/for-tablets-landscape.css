@@ -1,0 +1,54 @@
+@import url('hamburger-menu.css');
+/* хэдер */
+    .header{
+        padding: 0 3% 0 3%;
+    }
+
+    /* панель навигации */
+    .nav{
+        padding-left: 3%;
+        padding-right: 3%;
+
+    }
+
+        /* список навигация */
+        .nav-list{
+            display:none;
+        }
+        
+        /* скрытый список навигация */
+        .nav-dropdown-list{
+            display:block;
+        }
+
+        /* основной контент */
+        .content{
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+
+                /* статьи */
+                .articles{
+                    /* уже указанно в for-tablets-landscape */
+                    /* width:calc(100% - var(--aside-min-width)); */
+                }
+
+                    .article{
+                        width:100%;
+                    }
+
+                            .read-more-btn{
+                                padding: 6px 11px;
+                            }
+
+/* подвал */
+.footer{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.footer-section-three form input[type="text"], 
+.footer-section-three form textarea{
+    width:100%;
+    box-sizing: border-box;
+}

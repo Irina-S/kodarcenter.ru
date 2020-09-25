@@ -1,0 +1,26 @@
+    .header{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+        .contacts{
+            min-width: 210px;
+        }
+
+    .nav{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+            .search-wrapper{
+                min-width:210px;
+            }
+
+        .content{
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+.footer{
+    padding-left: 2%;
+    padding-right: 2%;
+}

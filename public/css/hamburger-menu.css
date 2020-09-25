@@ -1,0 +1,78 @@
+  /* иконка меню - гамбургер */
+
+  /* импорт иконочного шрифта */
+/* @import url('feather-webfont/feather.css'); */
+
+  /* иконки габургер и крест */
+.icon-menu, .icon-cross{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    cursor:pointer;  
+    transition: color 0.2s ease-in-out; 
+}
+
+  .icon-menu:hover, .icon-cross:hover{
+      color: var(--light-gray);
+    }
+
+
+  /* выпадающий список - скрытое меню */
+ .nav-dropdown-list{
+    position: absolute; /*!!!в дальнейшем возможны проблемы!!!*/
+    box-sizing:border-box;
+    background: #F2994A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    left:0;
+    top: calc(-1 * 8 *(20pt + 26px));;
+    transition: top 1s ease-in-out;
+    -webkit-box-shadow: 0px 8px 8px 0px rgba(91, 91, 91, 0.75);
+    -moz-box-shadow:    0px 8px 8px 0px rgba(91, 91, 91, 0.75);
+    box-shadow:         0px 8px 8px 0px rgba(91, 91, 91, 0.75);
+    padding:0;
+    margin:0 auto; 
+    z-index:100;    
+  }
+
+    .nav-dropdown-list li{
+        list-style:none;
+        text-align:center;
+        padding:0;
+        margin:0 auto; 
+        transition-property: background;
+        transition-duration:0.3s;
+        border-bottom: 1px solid #f0eeee59;
+    }
+
+    .nav-dropdown-list:first-child{
+      border-top: 1px solid #f0eeee59;
+  }
+
+      .nav-dropdown-list li:hover{
+        background: var(--dark-orange)
+      }
+    
+
+        .nav-dropdown-list li a{
+            display:block;
+            padding: 13px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20pt; 
+        }
+
+    /* меню в раскрытом состоянии */
+    .down{
+      top: calc(var(--header-height) + var(--nav-height));
+    }
+
+    @media  (max-width: 510px){
+      .down{
+        top: calc(var(--header-height) + var(--nav-height) + 80px); 
+      }
+    }

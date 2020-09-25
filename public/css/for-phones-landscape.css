@@ -1,0 +1,28 @@
+.description{
+    display:none;
+}
+
+.footer{
+    height:660px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .footer-section-one{
+        order:1;
+        flex-basis:50%;
+    }
+
+    .footer-section-two{
+        order:3;
+    }
+
+        .footer-section-two > iframe{
+            width:100%;
+        }
+
+    .footer-section-three{
+        order:2;
+        flex-basis:50%;
+        margin-bottom:0;
+    }

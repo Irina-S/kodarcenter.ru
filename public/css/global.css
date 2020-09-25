@@ -1,0 +1,7 @@
+@import url('for-all.css');
+/* @import url('for-desktop.css') (max-width:1030px); */
+@import url('for-desktop.css') (max-width:1100px);
+@import url('for-tablets-landscape.css') (max-width:960px);
+@import url('for-tablets-portrait.css') (max-width:760px);
+@import url('for-phones-landscape.css') (max-width:660px);
+@import url('for-phones-portrait.css') (max-width:555px);
