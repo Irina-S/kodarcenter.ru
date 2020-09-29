@@ -9,7 +9,10 @@
         <label for="article-img-input">Изображение</label>
 
         <?php if (isset($articleInfo) && $articleInfo['img_path']!='') : ?>
-            <img class="article-img-container" src=<?='/'.$articleInfo['img_path'] ?>>
+            <div class="article-img-container" data-img-path=<?=$articleInfo['img_path']?> data-article-id=<?=$articleInfo['article_id']?>>
+                <img class="article-img" src=<?='/'.$articleInfo['img_path'] ?>>
+                <div class="article-img-del-button" title="Удалить изображение"></div>
+            </div>
         <?php endif; ?>
         
         <input name="article-img" id="article-img-input" type="file" accept="image/jpeg,image/png,image/gif">

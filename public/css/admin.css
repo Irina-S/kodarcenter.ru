@@ -706,9 +706,6 @@ form.contacts-edit-form,
         
     }
     
-    /* form.article-edit-form input[type="text"]:focus, form.article-edit-form input[type="file"]:focus, form.article-edit-form textarea:focus{
-        outline: var(--turquoise) 1px solid;
-    } */
 
     form.article-edit-form input[type="text"], form.article-edit-form textarea,
     form.contacts-edit-form input[type="text"], form.contacts-edit-form textarea{
@@ -726,12 +723,45 @@ form.contacts-edit-form,
         margin-top:15px;
     }
 
-    .article-img-container{
+    .article-img-container, .worker-photo-container{
         width:200px;
         height:150px;
         object-fit: cover;
         margin:5px 20px 15px 20px;
+        position:relative;
     }
+
+    .worker-photo-container{
+        width:150px;
+    }
+
+        .article-img, .worker-photo{
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            position:relative;
+            top:0;
+            left:0;
+            z-index:10;
+        }
+
+        .article-img-del-button, .worker-photo-del-button{
+            position:absolute;
+            top:0;
+            left:0; 
+            background:url("../img/delete-button.svg") center no-repeat, #00000048;
+            background-size: 30% 30%;
+            background-blend-mode:  overlay;
+            width:100%;
+            height:100%;
+            z-index:1;
+        }
+
+        .article-img-container:hover .article-img-del-button,
+        .worker-photo-container:hover .worker-photo-del-button{
+            z-index:100;
+            cursor:pointer;
+        }
 
 
 

@@ -10,7 +10,7 @@ return [
     ],
 
     'admin' => [
-        'news', 'addnews', 'editnews', 'delnews', 
+        'news', 'addnews', 'editnews', 'delnews', 'delarticleimg', 
         'aboutus', 'aboutusedit', 'gallery', 'delimg',
         'workers', 'addworker', 'editworker', 'delworker',
         'price', 'editprice',

@@ -27,6 +27,52 @@ $(function(){
         }
     });
 
+    $('.article-img-container').on('click', function(){
+        let confirmation = confirm("Удалить изображение?");
+        if (confirmation){
+            let jqXHR = $.ajax({
+                url:'delarticleimg',
+                context:this,
+                data:'img-path='+this.dataset.imgPath+'&article-id='+this.dataset.articleId,
+                method:'post'
+            }).done(function(){
+                if (jqXHR.responseText=='Success'){
+                    $(this).remove();
+                    alert('Успешно!');
+                }
+                else{
+                    alert('Не удалось выполнить запрос!')
+                }
+            }).fail(function(){
+                alert('Не удалось выполнить запрос!')
+            })
+        }
+    })
+
+    $('.worker-photo-container').on('click', function(){
+        let confirmation = confirm("Удалить фото?");
+        if (confirmation){
+            let jqXHR = $.ajax({
+                url:'delarticleimg',
+                context:this,
+                data:'photo-path='+this.dataset.photoPath+'&worker-id='+this.dataset.workerId,
+                method:'post'
+            }).done(function(){
+                console.log(jqXHR.responseText);
+                if (jqXHR.responseText=='Success'){
+                    $(this).remove();
+                    alert('Успешно!');
+                }
+                else{
+                    alert('Не удалось выполнить запрос!')
+                }
+            }).fail(function(){
+                alert('Не удалось выполнить запрос!')
+            })
+        }
+    })
+
+
     $('.gallery-img-container').on('click', function(){
         let confirmation = confirm("Удалить выбранный элемент?");
         if (confirmation){
@@ -48,9 +94,8 @@ $(function(){
             }).fail(function(){
                 console.log(jqXHR.responseText);
                 alert('Не удалось выполнить запрос!')
-        })
+            })
         }
-        
     })
 
     $('[name="price-submit"], [name="graphics-submit"]').on('click', function(event){

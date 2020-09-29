@@ -15,8 +15,11 @@
 
         <label for="worker-photo-input">Фото</label>
 
-        <?php if (isset($worker['photo_path']) && $worker['photo_path']!='') : ?>
-            <img class="article-img-container" src=<?='/'.$worker['photo_path'] ?>>
+        <?php if (isset($worker['photo_path']) && $worker['photo_path']!='') : ?>     
+            <div class="worker-photo-container" data-photo-path=<?=$worker['photo_path']?> data-worker-id=<?=$worker['worker_id']?>>
+                <img class="worker-photo" src=<?='/'.$worker['photo_path'] ?>>
+                <div class="worker-photo-del-button" title="Удалить изображение"></div>
+            </div>
         <?php endif; ?>
 
         <input type="hidden" name="photo-img-path" <?php if (isset($worker['photo_path'])) echo 'value="'.$worker['photo_path'].'"'?>>

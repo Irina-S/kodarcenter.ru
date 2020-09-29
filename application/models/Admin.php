@@ -46,7 +46,30 @@ class Admin extends Model{
     }
 
     public function delImg($path){
-        unlink($path);
+        return unlink($path);
+    }
+
+    public function delImgPathFromDb($table, $id){
+        $sql = '';
+        $parms = [];
+        switch ($table){
+            case 'article': 
+                $sql = "UPDATE $table SET img_path = :img_path WHERE (article_id = :article_id)";
+                $params = [
+                    'img_path'=>'',
+                    'article_id'=>$id
+                ];
+                break;
+            case 'worker':
+                $sql = "UPDATE $table SET photo_path = :photo_path WHERE (worker_id = :worker_id)";
+                $params = [
+                    'photo_path'=>'',
+                    'worker_id'=>$id
+                ];
+                break;
+        }
+        
+        return $this->db->query($sql, $params);
     }
 
     public function maxFileName($destination){

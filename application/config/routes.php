@@ -99,6 +99,11 @@ return [
         'action' =>'delnews'
     ],
 
+    'admin/delarticleimg' => [
+        'controller' => 'admin',
+        'action' =>'delarticleimg'
+    ],
+
     'admin/aboutus' => [
         'controller' => 'admin',
         'action' =>'aboutus'

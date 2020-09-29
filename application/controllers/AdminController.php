@@ -13,10 +13,6 @@ class AdminController extends Controller{
     
     private $articlesPerPage = 5;
 
-    // public function dbAction(){
-    //     $this->model->db();
-    // }
-
     // ЛОГИН И ВЫХОД
 
     public function loginAction(){
@@ -166,8 +162,9 @@ class AdminController extends Controller{
     public function delnewsAction(){
         // debug($_POST['id']);
         $this->model->deleteArticle($_POST['id']);
-        
     }
+
+
 
     // ***************************************************************************************
 
@@ -617,6 +614,26 @@ class AdminController extends Controller{
     }
 
     // ***************************************************************************************
+
+    public function delarticleimgAction(){
+        $result = false;
+        if (isset($_POST['article-id'])){
+            if ($this->model->delImgPathFromDb('article', $_POST['article-id']))
+                $result = true;
+            if ($result)
+                $result = $this->model->delImg($_POST['img-path']);    
+        }
+        else if (isset($_POST['worker-id'])){
+            if ($this->model->delImgPathFromDb('worker', $_POST['worker-id']))
+                $result = true;
+            if ($result)
+                $result = $this->model->delImg($_POST['photo-path']); 
+        } 
+        if ($result)
+            echo "Success";
+        else
+            echo "Error";
+    } 
 
 
 }
