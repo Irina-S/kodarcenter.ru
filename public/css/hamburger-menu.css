@@ -1,7 +1,6 @@
   /* иконка меню - гамбургер */
 
   /* импорт иконочного шрифта */
-/* @import url('feather-webfont/feather.css'); */
 
   /* иконки габургер и крест */
 .icon-menu, .icon-cross{
@@ -22,11 +21,11 @@
 
   /* выпадающий список - скрытое меню */
  .nav-dropdown-list{
-    position: absolute; /*!!!в дальнейшем возможны проблемы!!!*/
+    position: absolute; 
     box-sizing:border-box;
-    background: #F2994A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: var(--deep-orange);
+    background: -webkit-linear-gradient(to right, var(--orange), var(--deep-orange));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--orange), var(--deep-orange)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 100%;
     left:0;
     top: calc(-1 * 8 *(20pt + 26px));;

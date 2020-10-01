@@ -70,12 +70,10 @@
     <script>
         let section = <?="'$page'" ?>;
         let serverDates = <?=$dates ?>;
-        console.dir(serverDates);
 
         let dates = serverDates.map(function(date){
             return (new Date(date)).toDateString();
         })
-        console.dir(dates);
 
         $('#articles-datepicker').datepicker({
                 // Передаем функцию, которая добавляет 11 числу каждого месяца класс 'my-class'
